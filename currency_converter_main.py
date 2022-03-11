@@ -1,7 +1,4 @@
 '''
-Approach 1
-Using List and Dict
-
 Reads the Text File and Then Converts them into Currencies and Saves the File
 
 '''
@@ -11,7 +8,7 @@ import json
 STATIC_PRICE_FILE = "current_values.json"
 
 
-def read_json_file(file_name):
+def read_json_file(file_name : str) -> dict:
     '''
     Reading JSON File and returns the Converted Currency For Valid Entries
 
@@ -24,7 +21,7 @@ def read_json_file(file_name):
         return reader
 
 
-def main_currency_converter_function(input_json, output_currency):
+def main_currency_converter_function(input_json: json, output_currency: str) -> json:
     '''
     This Function Validates the inputs and returns the converted currency
     '''
@@ -38,7 +35,7 @@ def main_currency_converter_function(input_json, output_currency):
     return {"value": 0, "currency": output_currency}
 
 
-def static_currency_converter(input_value, input_currency, output_currency):
+def static_currency_converter(input_value: int, input_currency: str, output_currency: str)-> json:
     '''
     This Function Takes in the Input Value
     and the Currency Type and Returns the
