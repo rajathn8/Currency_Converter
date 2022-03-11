@@ -1,0 +1,34 @@
+[
+    {
+      "value": "a9.95",
+      "currency": "USD"
+    },
+    {
+      "value": 99.95,
+      "currency": "JPY"
+    },
+    {
+      "value": 10.99,
+      "currency": "EUR"
+    },
+    {
+      "value": 10.99,
+      "currency": "RRR"
+    },
+    {
+      "value": 25,
+      "currency": "INR"
+    },
+    {
+     "value": 99.95,
+     "currency": "IDR"
+    },
+    {
+     "value": 10.99,
+     "currency": "MYR"
+    },
+    {
+     "value": 10.99,
+     "currency": "NZD"
+    }
+  ]
