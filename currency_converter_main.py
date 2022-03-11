@@ -8,7 +8,7 @@ import json
 STATIC_PRICE_FILE = "current_values.json"
 
 
-def read_json_file(file_name : str) -> dict:
+def read_json_file(file_name: str) -> dict:
     '''
     Reading JSON File and returns the Converted Currency For Valid Entries
 
@@ -35,7 +35,7 @@ def main_currency_converter_function(input_json: json, output_currency: str) -> 
     return {"value": 0, "currency": output_currency}
 
 
-def static_currency_converter(input_value: int, input_currency: str, output_currency: str)-> json:
+def static_currency_converter(input_value: int, input_currency: str, output_currency: str) -> json:
     '''
     This Function Takes in the Input Value
     and the Currency Type and Returns the
