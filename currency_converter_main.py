@@ -36,7 +36,7 @@ def main_currency_converter_function(input_value, output_currency, price_dict):
 
     else:
         # Input is Invalid
-        #print(type(input_value['value']),input_value['value'])
+        # print(type(input_value['value']),input_value['value'])
         return {"value": 0, "currency": output_currency}
 
 
@@ -49,16 +49,17 @@ def static_currency_converter(input_value, currency, price_dict):
 
     # First Step
     # Convert Value to Euro's
-    
+
     if input_value['currency'] == currency:
         return {"value": input_value['value'], "currency": currency}
-    
+
     else:
-        
-        price_in_euro = input_value["value"]/price_dict[input_value['currency']]
-        
+
+        price_in_euro = input_value["value"] / \
+            price_dict[input_value['currency']]
+
         value = price_in_euro * price_dict[currency]
-        
+
         return {"value": value, "currency": currency}
 
 
@@ -76,7 +77,6 @@ if __name__ == '__main__':
     target_currency = args.target_currency
 
     price_dict = read_json_file(STATIC_PRICE_FILE)[0]
-    
 
     for request_values in input_file:
         print(main_currency_converter_function(
