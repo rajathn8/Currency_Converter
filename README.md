@@ -24,7 +24,7 @@ Implement an API to convert currencies
 
 Run the command below in the source directory
 
-```uvicorn app.main:app ```
+```uvicorn app:app ```
 
 go to  ```http://127.0.0.1:8000/docs``` to check the endpoints
 
@@ -62,3 +62,8 @@ Output
     output_currency: str
 
 ```
+# Testing
+
+         Navigate to the Source Folder and Run
+
+```python3 -m pytest tests```
