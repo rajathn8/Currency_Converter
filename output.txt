@@ -1,0 +1,8 @@
+{'value': 'input value must be a numerical', 'currency': 'USD'}
+{'value': 0.7726135000000001, 'currency': 'EUR'}
+{'value': 10.99, 'currency': 'EUR'}
+{'value': 10.99, 'currency': 'input currency not supported'}
+{'value': 0.29750000000000004, 'currency': 'EUR'}
+{'value': 0.0063968, 'currency': 'EUR'}
+{'value': 10.03387, 'currency': 'EUR'}
+{'value': 6.80281, 'currency': 'EUR'}
