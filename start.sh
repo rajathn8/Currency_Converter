@@ -1,4 +1,11 @@
 #!/bin/sh
 
 nginx -g "pid $(pwd)/nginx.pid;"
-gunicorn --config=gunicorn.conf.py app.main:app
+cmd ls
+yourfilenames=`ls *`
+for eachfile in $yourfilenames
+do
+   echo $eachfile
+done
+cd app/
+gunicorn --config=./gunicorn.conf.py main:app
