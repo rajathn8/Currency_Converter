@@ -1,11 +1,4 @@
 
-Things to do
-
-1 - API to Convert Currencies from One Format to Euro
-2 - 
-
-
-
 Test Cases
 
 Edge Cases
