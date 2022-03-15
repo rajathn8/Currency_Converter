@@ -30,7 +30,7 @@ def base_url():
             description='Returns the Information of the Application such as Name and environment',
             response_model=api_models.InfoModel,
             status_code=200)
-def color_suggestor_info():
+def currency_converter_info():
     """
     Test endpoint
     go to -> /info
@@ -50,6 +50,6 @@ async def convert_currency(params: api_models.InputCurrency = Depends()):
 
     Convert Currency Based on Input
     """
-    value = api_services.currency_converter(
+
+    return api_services.currency_converter(
         params.input_value, params.input_currency, params.output_currency)
-    return value
