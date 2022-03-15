@@ -1,0 +1,15 @@
+Please give a short description of the following characteristics for your solution:
+
+● Will it work with a 2 TB input file as well?
+    This Will not work for a 2TB Input File as I am reading the entire JSON File as one Object.
+    If we were able to read the JSON File in Chunks and Process them in Chunks It would work.
+
+● What would happen if the input file has one malformed JSON line towards the
+end of the file?
+   We would not be able to read the File. We would run into
+
+● Assume your API should degrade gracefully / still be available in case the
+upstream exchange rate service is down. How would you handle this?
+    I would use Caching Mechanism to Store the latest Values. 
+    Which would be refreshed Every 20 Minutes with the Latest Currency Prices.
+    Why 20 Minutes? Its an arbitary number
