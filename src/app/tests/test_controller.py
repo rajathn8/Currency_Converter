@@ -2,9 +2,6 @@
 
 Tests for Controllers
 
-Note
-- Facing relative Import Errors
-
 """
 import os
 
