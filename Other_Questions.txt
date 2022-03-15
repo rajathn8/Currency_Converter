@@ -1,15 +1,24 @@
 Please give a short description of the following characteristics for your solution:
 
 ● Will it work with a 2 TB input file as well?
-    This Will not work for a 2TB Input File as I am reading the entire JSON File as one Object.
-    If we were able to read the JSON File in Chunks and Process them in Chunks It would work.
+    This Will not work for a 2TB Input File
+    as I am reading the entire JSON File as one Object so it will fail due to Memory Error
+    We could read the JSON File in Chunks to mitigate this issue
+    but ourservice will fail as we will get blocked from our API Vendor as we would exceed our rate limit
 
-● What would happen if the input file has one malformed JSON line towards the
+
+
+3-  What would happen if the input file has one malformed JSON line towards the
 end of the file?
-   We would not be able to read the File. We would run into
+   We would not be able to read the File 
+   the better solution would be to fix the broken data at the source
+   But if that is not an option we could use regex.
 
-● Assume your API should degrade gracefully / still be available in case the
+
+3 - Assume your API should degrade gracefully / still be available in case the
 upstream exchange rate service is down. How would you handle this?
-    I would use Caching Mechanism to Store the latest Values. 
-    Which would be refreshed Every 20 Minutes with the Latest Currency Prices.
-    Why 20 Minutes? Its an arbitary number
+    I would use a Caching Mechanism to Store the latest Converted Values for one currency.
+    and Convert to the requested currency by computing it based on the latest currency value
+    By this i would reduce the number of calls to the API.
+    This Cache would be refreshed Every X Minutes with the Latest Currency Prices
+    
