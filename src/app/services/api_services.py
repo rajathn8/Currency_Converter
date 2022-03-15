@@ -30,8 +30,12 @@ def currency_converter(input_value: int, input_currency: str, output_currency: s
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
 
     page = requests.get(url, headers=headers)
-
-    load_dict = json.loads(page.text)
+    
+    try:
+        load_dict = json.loads(page.text)
+    
+    except Exception:
+        return {"result":"Invalid Input"}
 
     if 'result' in load_dict:
 
