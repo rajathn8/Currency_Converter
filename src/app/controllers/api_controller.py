@@ -8,8 +8,8 @@ Todo
 """
 
 from fastapi import APIRouter, Depends
-from app.models import api_models
-from app.services import api_services
+from models import api_models
+from services import api_services
 
 
 router = APIRouter()
