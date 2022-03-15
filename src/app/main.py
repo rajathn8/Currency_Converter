@@ -7,7 +7,7 @@ import logging
 
 from fastapi import FastAPI
 
-from app.controllers import api_controller
+from controllers import api_controller
 
 log = logging.getLogger("Currency_Converter_Service")
 
