@@ -20,7 +20,7 @@ def read_json_file(file_name: str) -> dict:
         return reader
 
 
-def currency_converter(input_value: int, input_currency: str, output_currency: str) -> json:
+def currency_converter(input_value: int, input_currency: str, output_currency: str):
     '''
     This Function Validates the inputs and returns the converted currency
     '''
@@ -29,9 +29,9 @@ def currency_converter(input_value: int, input_currency: str, output_currency: s
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
 
-    html = requests.get(url, headers=headers)
+    page = requests.get(url, headers=headers)
 
-    load_dict = json.loads(html.text)
+    load_dict = json.loads(page.text)
 
     if 'result' in load_dict:
 
@@ -44,7 +44,7 @@ def currency_converter(input_value: int, input_currency: str, output_currency: s
         return {"value": 'input value must be a numerical', "currency": input_currency}
 
     # nocheck for intput_value
-    if (output_currency in price_dict) and isinstance(input_value, (int, float)):
+    if output_currency in price_dict:
 
         value = input_value*price_dict[output_currency]
 
