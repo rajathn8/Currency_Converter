@@ -22,9 +22,9 @@ Implement an API to convert currencies
 
 # Usage
 
-Run the command below in the source directory
+Run the command below in the source/app directory
 
-```uvicorn app:app ```
+```uvicorn main:app ``` or ```uvicorn main:app --reload```
 
 go to  ```http://127.0.0.1:8000/docs``` to check the endpoints
 
